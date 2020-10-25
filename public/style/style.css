@@ -1,0 +1,124 @@
+html {
+    height: 100%;
+    width: 100%;
+    font-family: "Helvetica Neue", sans-serif;
+}
+html,
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: black;
+    color: white;
+}
+
+body > header {
+    text-align: center;
+    padding-top: 3px;
+    text-transform: uppercase;
+    font-size: 14px;
+    user-select: none;
+    color: #8c8585;
+    -webkit-app-region: drag;
+    -webkit-user-select: none;
+}
+
+#diff-result,
+#diff-insert {
+    flex: 1;
+    flex-direction: column;
+}
+
+#diff-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#diff-form > .diff-form__input {
+    flex: 1;
+    display: flex;
+}
+#diff-form > .diff-form__input > div {
+    flex: 1;
+    position: relative;
+    margin: 10px;
+    display: flex;
+}
+
+#right-placeholder,
+#left-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #f1f1f1;
+    z-index: 0;
+    user-select: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#diff-result section,
+#diff-form textarea {
+    flex: 1;
+}
+#diff-form textarea {
+    outline: none;
+    resize: none;
+    border: 1px solid #616161;
+    padding: 5px;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.diff-form__actions {
+    margin: 0 10px 10px 10px;
+    text-align: right;
+    -webkit-app-region: drag;
+}
+button {
+    background-color: #595cff;
+    color: #ffffff;
+    border: 1px solid #595cff;
+    border-radius: 2px;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+}
+button:hover {
+    background-color: #4f52e3;
+}
+
+#diff-insert,
+#diff-result {
+    display: none;
+}
+#diff-insert.active,
+#diff-result.active {
+    display: flex;
+}
+
+#diff-result section {
+    margin: 10px;
+    overflow: auto;
+    border: 1px solid #616161;
+    padding: 5px;
+}
+#diff-result footer {
+    margin: 0 10px 10px 10px;
+    -webkit-app-region: drag;
+}
+
+.added {
+    background-color: rgba(46, 255, 21, 0.43);
+}
+.removed {
+    background-color: rgba(255, 9, 0, 0.24);
+}

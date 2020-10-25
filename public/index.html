@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; img-src http://localhost:4001/favicon.ico; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />
+    <title>Diffirenza</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<header>
+    Diffirenza
+</header>
+<section id="diff-insert" class="active">
+    <form id="diff-form">
+        <div class="diff-form__input">
+            <div>
+                <div id="left-placeholder">Before</div>
+                <textarea id="left" placeholder="Before..."></textarea>
+            </div>
+            <div>
+                <div id="right-placeholder">After</div>
+                <textarea id="right" placeholder="After..."></textarea>
+            </div>
+        </div>
+        <div class="diff-form__actions">
+            <button type="submit" class="diff-form__actions__submit">Submit</button>
+        </div>
+    </form>
+</section>
+<section id="diff-result">
+    <section></section>
+    <footer>
+        <button type="button" class="diff-result__btn-back">Back</button>
+    </footer>
+</section>
+<script src="js/main.js"></script> 
+</body>
+</html>
